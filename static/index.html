@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>День 26 · Локальная LLM</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <a class="brand" href="/" aria-label="AI Advent, главная"><span class="brand-icon">a</span> AI Advent</a>
+      <div class="day-label">ПРАКТИКА / ДЕНЬ 26</div>
+      <div class="nav-item"><span class="dot online"></span> Локальная LLM <span>↗</span></div>
+      <div class="side-note"><span class="small-label">СЕГОДНЯ В ПЛАНЕ</span><p>Запустить модель.<br>Обратиться через API.<br>Получить три ответа.</p></div>
+      <div class="connection-card">
+        <span class="small-label">ПОДКЛЮЧЕНИЕ</span>
+        <div class="connection"><span id="status-dot" class="dot"></span><strong id="status-text">Проверяем Ollama…</strong></div>
+        <span class="endpoint">127.0.0.1:11434</span>
+        <p id="version">Локальный HTTP API</p>
+        <button id="refresh" class="text-button" type="button">Проверить соединение ↻</button>
+      </div>
+      <div class="side-footer">Вычисления на вашем компьютере</div>
+    </aside>
+    <main>
+      <header><span>ЛАБОРАТОРИЯ МОДЕЛЕЙ</span><span class="local-tag"><span class="dot online"></span> LOCAL</span></header>
+      <section class="intro">
+        <div class="eyebrow">26 / ЗАПУСК ЛОКАЛЬНОЙ LLM</div>
+        <h1>Большая модель.<br><span>На вашем компьютере.</span></h1>
+        <p>Задайте вопрос локальной модели и посмотрите, как она справляется<br class="wide-only"> с задачами разной сложности.</p>
+      </section>
+      <div id="error" class="error" role="alert" hidden></div>
+      <section class="composer panel" aria-labelledby="request-heading">
+        <div class="section-heading"><h2 id="request-heading">Ваш запрос</h2><span class="section-number">01</span></div>
+        <form id="prompt-form">
+          <label for="model">Модель</label>
+          <select id="model" disabled><option>Загрузка моделей…</option></select>
+          <label class="prompt-label" for="prompt">Сообщение</label>
+          <textarea id="prompt" maxlength="8000" rows="4" placeholder="Например: объясни, как работает локальная языковая модель" required></textarea>
+          <div class="composer-footer"><span>Ctrl + Enter — отправить · до 8 000 символов</span><button id="send" class="primary" type="submit" disabled>Отправить запрос <span>↗</span></button></div>
+        </form>
+        <p class="hint">Каждый запрос независимый. При первом обращении загрузка модели может занять около минуты.</p>
+      </section>
+      <section class="examples-section" aria-labelledby="examples-heading">
+        <div class="section-heading"><h2 id="examples-heading">Три уровня сложности</h2><button id="run-all" class="text-button" disabled type="button">Запустить все три →</button></div>
+        <div id="examples" class="examples"></div>
+      </section>
+      <section class="results-section" aria-labelledby="results-heading">
+        <div class="section-heading"><h2 id="results-heading">Ответы модели <span id="count" class="count">0</span></h2><button id="download" class="text-button" disabled type="button">Скачать JSON ↓</button></div>
+        <div id="progress" class="progress" role="status" aria-live="polite" hidden><span class="spinner"></span><span id="progress-text"></span></div>
+        <div id="empty" class="empty"><div class="empty-symbol">✳</div><strong>Здесь появится ответ</strong><p>Напишите свой запрос или выберите один из примеров выше.</p></div>
+        <div id="results" aria-live="polite" aria-relevant="additions"></div>
+      </section>
+      <footer>AI Advent · День 26<span>Ollama / локальный API</span></footer>
+    </main>
+  </div>
+</body>
+</html>

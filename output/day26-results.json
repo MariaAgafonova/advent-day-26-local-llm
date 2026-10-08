@@ -1,0 +1,177 @@
+﻿{
+    "checked_at_utc":  "2026-10-08T20:51:35.042014+00:00",
+    "application_url":  "http://127.0.0.1:8526",
+    "ollama_url":  "http://127.0.0.1:11434",
+    "ollama_version":  "0.40.0",
+    "model":  "qwen3.5:4b",
+    "installed_models":  [
+                             {
+                                 "name":  "qwen3.5:latest",
+                                 "model":  "qwen3.5:latest",
+                                 "modified_at":  "2026-10-07T18:33:44.2549777+02:00",
+                                 "size":  6550825550,
+                                 "digest":  "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+                                 "details":  {
+                                                 "parent_model":  "model.gguf",
+                                                 "format":  "gguf",
+                                                 "family":  "qwen35",
+                                                 "families":  [
+                                                                  "qwen35"
+                                                              ],
+                                                 "parameter_size":  "9.0B",
+                                                 "quantization_level":  "Q4_K_M",
+                                                 "context_length":  262144,
+                                                 "embedding_length":  4096,
+                                                 "runner":  "llamacpp"
+                                             },
+                                 "capabilities":  [
+                                                      "completion",
+                                                      "vision",
+                                                      "tools",
+                                                      "thinking"
+                                                  ]
+                             },
+                             {
+                                 "name":  "qwen3.5:4b",
+                                 "model":  "qwen3.5:4b",
+                                 "modified_at":  "2026-10-07T18:03:34.1914665+02:00",
+                                 "size":  3324173934,
+                                 "digest":  "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+                                 "details":  {
+                                                 "parent_model":  "model.gguf",
+                                                 "format":  "gguf",
+                                                 "family":  "qwen35",
+                                                 "families":  [
+                                                                  "qwen35"
+                                                              ],
+                                                 "parameter_size":  "4.2B",
+                                                 "quantization_level":  "Q4_K_M",
+                                                 "context_length":  262144,
+                                                 "embedding_length":  2560,
+                                                 "runner":  "llamacpp"
+                                             },
+                                 "capabilities":  [
+                                                      "completion",
+                                                      "vision",
+                                                      "tools",
+                                                      "thinking"
+                                                  ]
+                             }
+                         ],
+    "results":  [
+                    {
+                        "level":  "Простой",
+                        "title":  "Короткий вопрос",
+                        "prompt":  "Как называется столица Сербии? Ответь одним предложением.",
+                        "model":  "qwen3.5:4b",
+                        "answer":  "Столицей Сербии является город Белград.",
+                        "elapsed_seconds":  52.65,
+                        "output_tokens":  12,
+                        "tokens_per_second":  12.14,
+                        "truncated":  false,
+                        "raw":  {
+                                    "model":  "qwen3.5:4b",
+                                    "created_at":  "2026-10-08T20:52:27.7772538Z",
+                                    "message":  {
+                                                    "role":  "assistant",
+                                                    "content":  "Столицей Сербии является город Белград."
+                                                },
+                                    "done":  true,
+                                    "done_reason":  "stop",
+                                    "total_duration":  52603043800,
+                                    "load_duration":  50786301900,
+                                    "prompt_eval_count":  52,
+                                    "prompt_eval_cached_count":  0,
+                                    "prompt_eval_duration":  745686000,
+                                    "eval_count":  12,
+                                    "eval_duration":  988208000
+                                }
+                    },
+                    {
+                        "level":  "Средний",
+                        "title":  "Задача в несколько шагов",
+                        "prompt":  "В магазине 3 блокнота по 240 рублей и 2 ручки по 80 рублей. На всю покупку действует скидка 15%. Покупатель дал 1000 рублей. Рассчитай стоимость до скидки, сумму скидки, итоговую стоимость и сдачу. Покажи вычисления кратко.",
+                        "model":  "qwen3.5:4b",
+                        "answer":  "Вот расчеты:\n\n1.  **Стоимость до скидки:**\n    *   Блокноты: $3 \\times 240 = 720$ руб.\n    *   Ручки: $2 \\times 80 = 160$ руб.\n    *   Итого: $720 + 160 = 880$ руб.\n\n2.  **Сумма скидки:**\n    *   $880 \\times 0,15 = 132$ руб.\n\n3.  **Итоговая стоимость:**\n    *   $880 - 132 = 748$ руб. (или $880 \\times 0,85 = 748$ руб.)\n\n4.  **Сдача:**\n    *   $1000 - 748 = 252$ руб.\n\n**Ответ:** Сдача составляет **252 рубля**.",
+                        "elapsed_seconds":  32.49,
+                        "output_tokens":  217,
+                        "tokens_per_second":  7.01,
+                        "truncated":  false,
+                        "raw":  {
+                                    "model":  "qwen3.5:4b",
+                                    "created_at":  "2026-10-08T20:53:00.3868512Z",
+                                    "message":  {
+                                                    "role":  "assistant",
+                                                    "content":  "Вот расчеты:\n\n1.  **Стоимость до скидки:**\n    *   Блокноты: $3 \\times 240 = 720$ руб.\n    *   Ручки: $2 \\times 80 = 160$ руб.\n    *   Итого: $720 + 160 = 880$ руб.\n\n2.  **Сумма скидки:**\n    *   $880 \\times 0,15 = 132$ руб.\n\n3.  **Итоговая стоимость:**\n    *   $880 - 132 = 748$ руб. (или $880 \\times 0,85 = 748$ руб.)\n\n4.  **Сдача:**\n    *   $1000 - 748 = 252$ руб.\n\n**Ответ:** Сдача составляет **252 рубля**."
+                                                },
+                                    "done":  true,
+                                    "done_reason":  "stop",
+                                    "total_duration":  32428990500,
+                                    "load_duration":  8810600,
+                                    "prompt_eval_count":  106,
+                                    "prompt_eval_cached_count":  0,
+                                    "prompt_eval_duration":  1414287000,
+                                    "eval_count":  217,
+                                    "eval_duration":  30963159000
+                                }
+                    },
+                    {
+                        "level":  "Сложный",
+                        "title":  "Код и граничные случаи",
+                        "prompt":  "Напиши на Python функцию merge_intervals(intervals), которая объединяет пересекающиеся и соприкасающиеся закрытые интервалы. Вход — список пар целых чисел [start, end], где start \u003c= end. Не изменяй исходный список. Обработай пустой список. Для [[1,3],[2,6],[8,10],[10,12]] результат должен быть [[1,6],[8,12]]. Дай код функции, 3 assert-проверки (обычный случай, пустой список, вложенные интервалы) и кратко оцени сложность. До 250 слов.",
+                        "model":  "qwen3.5:4b",
+                        "answer":  "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n    \n    # Создаем копию списка для неизменения исходных данных\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [sorted_intervals[0]]\n    \n    for current in sorted_intervals[1:]:\n        last = merged[-1]\n        if current[0] \u003c= last[1]:\n            # Пересекаются или соприкасаются: объединяем\n            merged[-1] = (last[0], max(last[1], current[1]))\n        else:\n            # Не пересекаются: добавляем новый интервал\n            merged.append(current)\n    \n    return merged\n\n# Проверки\nassert merge_intervals([[1,3],[2,6],[8,10],[10,12]]) == [[1,6],[8,12]]\nassert merge_intervals([]) == []\nassert merge_intervals([[1,4],[2,5],[3,6]]) == [[1,6]]\n\n# Сложность: O(n log n) из-за сортировки. Пройденный цикл O(n).\n```",
+                        "elapsed_seconds":  34.88,
+                        "output_tokens":  260,
+                        "tokens_per_second":  8.25,
+                        "truncated":  false,
+                        "raw":  {
+                                    "model":  "qwen3.5:4b",
+                                    "created_at":  "2026-10-08T20:53:35.3804072Z",
+                                    "message":  {
+                                                    "role":  "assistant",
+                                                    "content":  "```python\ndef merge_intervals(intervals):\n    if not intervals:\n        return []\n    \n    # Создаем копию списка для неизменения исходных данных\n    sorted_intervals = sorted(intervals, key=lambda x: x[0])\n    merged = [sorted_intervals[0]]\n    \n    for current in sorted_intervals[1:]:\n        last = merged[-1]\n        if current[0] \u003c= last[1]:\n            # Пересекаются или соприкасаются: объединяем\n            merged[-1] = (last[0], max(last[1], current[1]))\n        else:\n            # Не пересекаются: добавляем новый интервал\n            merged.append(current)\n    \n    return merged\n\n# Проверки\nassert merge_intervals([[1,3],[2,6],[8,10],[10,12]]) == [[1,6],[8,12]]\nassert merge_intervals([]) == []\nassert merge_intervals([[1,4],[2,5],[3,6]]) == [[1,6]]\n\n# Сложность: O(n log n) из-за сортировки. Пройденный цикл O(n).\n```"
+                                                },
+                                    "done":  true,
+                                    "done_reason":  "stop",
+                                    "total_duration":  34797109600,
+                                    "load_duration":  14440400,
+                                    "prompt_eval_count":  175,
+                                    "prompt_eval_cached_count":  0,
+                                    "prompt_eval_duration":  3209208000,
+                                    "eval_count":  260,
+                                    "eval_duration":  31519373000
+                                }
+                    }
+                ],
+    "running_models":  [
+                           {
+                               "name":  "qwen3.5:4b",
+                               "model":  "qwen3.5:4b",
+                               "size":  3136248871,
+                               "digest":  "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+                               "details":  {
+                                               "parent_model":  "",
+                                               "format":  "gguf",
+                                               "family":  "qwen35",
+                                               "families":  [
+                                                                "qwen35"
+                                                            ],
+                                               "parameter_size":  "4.2B",
+                                               "quantization_level":  "Q4_K_M"
+                                           },
+                               "expires_at":  "2026-10-08T23:23:35.3809122+02:00",
+                               "size_vram":  0,
+                               "context_length":  4096,
+                               "runner":  "llamacpp"
+                           }
+                       ],
+    "passed":  true,
+    "quality_review":  {
+                           "method":  "manual inspection; generated code was not executed",
+                           "simple":  "correct: Belgrade",
+                           "medium":  "correct: subtotal 880, discount 132, total 748, change 252",
+                           "passed_scope":  "HTTP responses complete and non-empty; model loaded locally; not a semantic correctness score",
+                           "complex":  "incorrect output types: tuples instead of lists; first and third assertions would fail"
+                       }
+}
